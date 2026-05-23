@@ -184,8 +184,13 @@ body{
 
 #galleryImage{
 
-    width:320px;
-    height:420px;
+    width:80vw;
+
+    max-width:320px;
+
+    height:55vh;
+
+    max-height:420px;
 
     object-fit:cover;
 
@@ -205,13 +210,13 @@ body{
 
 #galleryText{
 
-    margin-top:30px;
+    margin-top:20px;
 
     font-family:'Dancing Script', cursive;
 
-    font-size:3rem;
+    font-size:2.2rem;
 
-    max-width:850px;
+    max-width:90%;
 
     line-height:1.4;
 
@@ -300,9 +305,11 @@ body{
 }
 #nextSlideBtn{
 
-    margin-top:30px;
+    margin-top:20px;
 
-    padding:15px 35px;
+    margin-bottom:30px;
+
+    padding:14px 28px;
 
     border:none;
 
@@ -322,6 +329,16 @@ body{
 
     box-shadow:
         0 0 15px rgba(255,255,255,0.5);
+
+    position:fixed;
+
+    bottom:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:1000;
 }
 
 #nextSlideBtn:hover{

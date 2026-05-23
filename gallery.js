@@ -47,9 +47,12 @@ button.addEventListener("click", () => {
 
     index++;
 
+    // GO TO ENDING PAGE
     if(index >= slides.length){
 
         window.location.href = "ending.html";
+
+        return;
     }
 
     showSlide();
