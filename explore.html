@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ready? 👀</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="explore-container">
+
+        <h1 class="explore-title">
+            Ready to explore...? 👀✨
+        </h1>
+
+        <p class="explore-text">
+            A few memories, <br>
+            a little chaos, <br>
+            and lots of love waiting ahead 💖
+        </p>
+
+        <p class="swipe-text">
+            Swipe left to see what's next ➜
+        </p>
+
+    </div>
+
+    <script>
+
+        let startX = 0;
+
+        document.addEventListener("touchstart", (e) => {
+
+            startX = e.touches[0].clientX;
+        });
+
+        document.addEventListener("touchend", (e) => {
+
+            let endX = e.changedTouches[0].clientX;
+
+            // LEFT SWIPE
+            if(startX - endX > 50){
+
+                window.location.href = "gallery.html";
+            }
+        });
+
+    </script>
+
+</body>
+</html>

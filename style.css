@@ -372,3 +372,63 @@ body{
 
     animation: fade 2s ease;
 }
+/* EXPLORE PAGE */
+
+.explore-container{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:white;
+
+    animation: fade 1.5s ease;
+}
+
+.explore-title{
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,0.6);
+}
+
+.explore-text{
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    opacity:0.95;
+}
+
+.swipe-text{
+
+    margin-top:50px;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+    opacity:0.8;
+
+    animation:
+        floatText 2s ease-in-out infinite;
+}

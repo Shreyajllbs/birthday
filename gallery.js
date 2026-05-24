@@ -1,6 +1,5 @@
 const image = document.getElementById("galleryImage");
 const text = document.getElementById("galleryText");
-const button = document.getElementById("nextSlideBtn");
 
 const slides = [
 
@@ -46,10 +45,6 @@ let index = 0;
 /* SHOW FIRST SLIDE */
 
 showSlide();
-
-/* BUTTON CLICK */
-
-button.addEventListener("click", nextSlide);
 
 /* SHOW NEXT SLIDE */
 
