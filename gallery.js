@@ -46,7 +46,7 @@ let index = 0;
 
 showSlide();
 
-/* SHOW NEXT SLIDE */
+/* NEXT SLIDE FUNCTION */
 
 function nextSlide(){
 
@@ -63,7 +63,7 @@ function nextSlide(){
     showSlide();
 }
 
-/* SHOW SLIDE FUNCTION */
+/* SHOW SLIDE */
 
 function showSlide(){
 
@@ -97,6 +97,16 @@ document.addEventListener("touchend", (e) => {
 
     // LEFT SWIPE
     if(startX - endX > 50){
+
+        nextSlide();
+    }
+});
+/* LAPTOP ARROW KEY SUPPORT */
+
+document.addEventListener("keydown", (e) => {
+
+    // RIGHT ARROW OR SPACE
+    if(e.key === "ArrowRight" || e.key === " "){
 
         nextSlide();
     }

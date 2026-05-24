@@ -6,36 +6,56 @@
 }
 
 body{
+
     background: linear-gradient(to right, #ff758c, #ff7eb3);
-    height:100vh;
+
+    min-height:100vh;
+
     display:flex;
+
     justify-content:center;
     align-items:center;
-    overflow:hidden;
+
+    overflow-x:hidden;
 }
+
+/* MAIN CONTAINER */
 
 .container{
+
     text-align:center;
+
     color:white;
+
     position:relative;
+
+    padding:20px;
 }
 
+/* TEDDY IMAGE */
+
 #mainImage{
+
     width:180px;
     height:180px;
+
     object-fit:cover;
+
     border-radius:20px;
 
     position:fixed;
+
     bottom:20px;
     right:20px;
 
     animation: fade 1s ease;
 }
 
+/* MAIN TEXT */
+
 #text{
 
-    font-family: 'Dancing Script', cursive;
+    font-family:'Dancing Script', cursive;
 
     font-size:4.5rem;
 
@@ -51,7 +71,11 @@ body{
         0 0 40px rgba(255,255,255,0.3);
 }
 
+/* INTRO BUTTON */
+
 #nextBtn{
+
+    display:none;
 
     margin-top:30px;
 
@@ -71,16 +95,23 @@ body{
 
     cursor:pointer;
 
-    display:none;
-
     transition:0.3s;
 
     box-shadow:
         0 0 15px rgba(255,255,255,0.6);
 }
+
 #nextBtn:hover{
+
     transform:scale(1.1);
 }
+
+#nextBtn:hover{
+
+    transform:scale(1.1);
+}
+
+/* ANIMATIONS */
 
 .pop{
     animation: pop 0.8s ease;
@@ -113,6 +144,7 @@ body{
         transform:scale(1);
     }
 }
+
 @keyframes floatText{
 
     0%{
@@ -127,11 +159,13 @@ body{
         transform:translateY(0px);
     }
 }
-/* REAL CONFETTI */
+
+/* CONFETTI */
 
 .confetti-piece{
 
     position:fixed;
+
     top:-20px;
 
     width:12px;
@@ -147,6 +181,7 @@ body{
 @keyframes confettiFall{
 
     0%{
+
         transform:
             translateY(-50px)
             rotate(0deg);
@@ -155,6 +190,7 @@ body{
     }
 
     100%{
+
         transform:
             translateY(110vh)
             rotate(720deg);
@@ -162,25 +198,30 @@ body{
         opacity:0;
     }
 }
+
 /* GALLERY PAGE */
 
 .gallery-container{
 
     width:100%;
-    height:100vh;
+
+    min-height:100vh;
 
     display:flex;
+
     flex-direction:column;
 
     justify-content:center;
     align-items:center;
 
-    padding:20px;
+    padding:30px 20px;
 
     text-align:center;
 
     color:white;
 }
+
+/* GALLERY IMAGE */
 
 #galleryImage{
 
@@ -208,6 +249,8 @@ body{
     transition:1s;
 }
 
+/* GALLERY TEXT */
+
 #galleryText{
 
     margin-top:20px;
@@ -230,6 +273,26 @@ body{
         0 0 10px rgba(255,255,255,0.8);
 }
 
+/* SWIPE TEXT */
+
+.swipe-text{
+
+    margin-top:30px;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+    opacity:0.8;
+
+    animation:
+        floatText 2s ease-in-out infinite;
+}
+
+/* SHOW ANIMATION */
+
 .show{
 
     opacity:1 !important;
@@ -238,113 +301,9 @@ body{
         translateY(0)
         scale(1) !important;
 }
-/* START SCREEN */
 
-#startScreen{
+/* ENDING PAGE */
 
-    width:100%;
-    height:100vh;
-
-    display:flex;
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    color:white;
-}
-
-#startText{
-
-    font-family:'Dancing Script', cursive;
-
-    font-size:4rem;
-
-    margin-bottom:30px;
-
-    text-shadow:
-        0 0 15px rgba(255,255,255,0.7);
-}
-
-#startBtn{
-
-    padding:15px 35px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:white;
-
-    color:#ff4f81;
-
-    font-size:1.2rem;
-
-    font-family:'Poppins', sans-serif;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-    box-shadow:
-        0 0 15px rgba(255,255,255,0.5);
-}
-
-#startBtn:hover{
-
-    transform:scale(1.1);
-}
-
-/* HIDE GALLERY INITIALLY */
-
-#galleryContainer{
-
-    display:none;
-}
-#nextSlideBtn{
-
-    margin-top:20px;
-
-    margin-bottom:30px;
-
-    padding:14px 28px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:white;
-
-    color:#ff4f81;
-
-    font-size:1rem;
-
-    font-family:'Poppins', sans-serif;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-    box-shadow:
-        0 0 15px rgba(255,255,255,0.5);
-
-    position:fixed;
-
-    bottom:20px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    z-index:1000;
-}
-
-#nextSlideBtn:hover{
-
-    transform:scale(1.08);
-}
 .ending-container{
 
     width:100%;
@@ -372,6 +331,33 @@ body{
 
     animation: fade 2s ease;
 }
+
+.ending-text{
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:4.5rem;
+
+    line-height:1.4;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,0.6);
+
+    animation:
+        floatText 4s ease-in-out infinite;
+}
+
+.ending-subtext{
+
+    margin-top:25px;
+
+    font-size:2rem;
+
+    font-family:'Poppins', sans-serif;
+
+    opacity:0.9;
+}
+
 /* EXPLORE PAGE */
 
 .explore-container{
@@ -417,18 +403,32 @@ body{
     opacity:0.95;
 }
 
-.swipe-text{
+/* MOBILE RESPONSIVE */
 
-    margin-top:50px;
+@media(max-width:768px){
 
-    font-family:'Poppins', sans-serif;
+    #text{
+        font-size:3rem;
+    }
 
-    font-size:1rem;
+    .explore-title{
+        font-size:3rem;
+    }
 
-    letter-spacing:1px;
+    .ending-text{
+        font-size:3rem;
+    }
 
-    opacity:0.8;
+    #galleryText{
+        font-size:1.8rem;
+    }
 
-    animation:
-        floatText 2s ease-in-out infinite;
+    #mainImage{
+        width:140px;
+        height:140px;
+    }
+
+    #galleryImage{
+        height:50vh;
+    }
 }

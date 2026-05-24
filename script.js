@@ -12,52 +12,72 @@ let index = 0;
 
 function showMessage() {
 
+    // TEXT ANIMATION
     text.style.animation = "none";
     void text.offsetWidth;
     text.style.animation = "fade 1s ease";
 
+    // SHOW CURRENT MESSAGE
     text.innerHTML = messages[index];
 
-    // FINAL SCREEN
+    // LAST MESSAGE SCREEN
     if(index === 2){
 
-    image.src = "images/small.jpg";
+        // CHANGE IMAGE
+        image.src = "images/small.jpg";
 
-    // MOVE IMAGE TO CENTER
-    image.style.position = "relative";
-    image.style.bottom = "0";
-    image.style.right = "0";
-    image.style.margin = "0 auto";
-    image.style.display = "block";
+        // CENTER IMAGE
+        image.style.position = "relative";
 
-    // BIGGER IMAGE
-    image.style.width = "300px";
-    image.style.height = "300px";
+        image.style.bottom = "0";
+        image.style.right = "0";
 
-    image.classList.add("pop");
+        image.style.margin = "20px auto";
 
-    startConfetti();
-}
+        image.style.display = "block";
+
+        // BIGGER IMAGE
+        image.style.width = "300px";
+        image.style.height = "300px";
+
+        // POP EFFECT
+        image.classList.remove("pop");
+        void image.offsetWidth;
+        image.classList.add("pop");
+
+        // CONFETTI
+        startConfetti();
+
+        // SHOW BUTTON AFTER CONFETTI STARTS
+        setTimeout(() => {
+
+            button.style.display = "inline-block";
+
+            button.innerHTML = "Oii click this 😤💖";
+
+        }, 1200);
+    }
 
     index++;
 
+    // CONTINUE MESSAGES
     if(index < messages.length){
+
         setTimeout(showMessage, 2200);
-    }
-    else{
-        setTimeout(() => {
-            button.style.display = "inline-block";
-        }, 1500);
     }
 }
 
+// START
 showMessage();
 
+/* BUTTON FUNCTION */
+
 function showGallery(){
+
     window.location.href = "gallery.html";
 }
 
-/* CONFETTI FUNCTION */
+/* CONFETTI */
 
 function startConfetti(){
 
@@ -96,9 +116,11 @@ function startConfetti(){
 
         document.body.appendChild(confetti);
 
-        // REMOVE AFTER FALLING
+        // REMOVE CONFETTI
         setTimeout(() => {
+
             confetti.remove();
+
         }, 5000);
     }
 }
