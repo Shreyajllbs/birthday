@@ -17,15 +17,21 @@ const slides = [
     },
 
     {
+        image: "images/picn.png",
+
+        text: "Somewhere between all the little fights and silly laughs... we were making the best childhood memories 💖"
+    },
+
+    {
         image: "images/pic3.jpg",
 
-        text: "The laughter, chaos, and cousin gang... some of the happiest memories ever 💫"
+        text: "Aa chaosum laughterum cousinsum... some of the happiest memories ever 💫"
     },
 
     {
         image: "images/pic4.jpg",
 
-        text: "No matter how much we grow up... you'll always be the Chechi I look up to 💕"
+        text: "No matter how much we grow up... nee ennum ente Chechi thanne aa 💕"
     },
 
     {
@@ -43,7 +49,11 @@ showSlide();
 
 /* BUTTON CLICK */
 
-button.addEventListener("click", () => {
+button.addEventListener("click", nextSlide);
+
+/* SHOW NEXT SLIDE */
+
+function nextSlide(){
 
     index++;
 
@@ -56,7 +66,7 @@ button.addEventListener("click", () => {
     }
 
     showSlide();
-});
+}
 
 /* SHOW SLIDE FUNCTION */
 
@@ -90,14 +100,9 @@ document.addEventListener("touchend", (e) => {
 
     let endX = e.changedTouches[0].clientX;
 
+    // LEFT SWIPE
     if(startX - endX > 50){
 
-        index++;
-
-        if(index >= slides.length){
-            index = 0;
-        }
-
-        showSlide();
+        nextSlide();
     }
 });
